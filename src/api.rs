@@ -13,7 +13,7 @@ async fn get_distro_list() -> HttpResponse {
 
 #[get("/date/{distro}")]
 async fn get_distro_update_date(distro: web::Path<String>) -> HttpResponse {
-    let path = "/apt-mirror/mirror/status/";
+    let path = "/apt-mirror/status/";
 
     let distro_hm = HashMap::from([
         ("ubuntu", format!("{}{}", path, "ubuntu")),
@@ -37,8 +37,7 @@ async fn get_distro_update_date(distro: web::Path<String>) -> HttpResponse {
 
 #[get("/status/{distro}")]
 async fn get_distro_status(distro: web::Path<String>) -> HttpResponse {
-    // /apt-mirror/mirror/status/
-    let path = "/apt-mirror/mirror/status/";
+    let path = "/apt-mirror/status/";
 
     let distro_hm = HashMap::from([
         ("ubuntu", format!("{}{}", path, "ubuntu")),
