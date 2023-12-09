@@ -1,0 +1,91 @@
+@font-face {
+    font-family: "codystar";
+    src: url("/static/font/Codystar/Codystar-Regular.ttf") format("woff2");
+    font-display: swap;
+}
+
+head, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    background-color: #0f0f0f;
+}
+
+.title {
+    width: 100%;
+
+    color: white;
+
+    padding: 10px;
+    
+    font-family: 'codystar';
+}
+
+.main_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 30%;
+
+    margin: 100px 0;
+
+    color: white;
+}
+
+.introduce_box {
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.introduce_box a {
+    font-size: 15px;
+}
+
+.mirror_list_box {
+    width: 70%;
+    min-height: 70%;
+
+    margin: 0 auto;
+
+    padding: 10px 20px;
+    border-radius: 15px;
+
+    color: white;
+
+    background-color: #202020;
+}
+
+.mirror_list {
+    width: 100%;
+    height: 100%;
+
+    color: white;
+}
+
+.mirror_list .distro {
+    width: 95%;
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    margin: 10px auto;
+    padding: 0 20px;
+
+    background-color: #303030;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
