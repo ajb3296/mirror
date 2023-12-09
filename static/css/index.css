@@ -76,7 +76,7 @@ head, body {
     height: 50px;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     
 
@@ -88,4 +88,24 @@ head, body {
     border-radius: 10px;
 
     cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .introduce_box {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: 200px;
+        width: 90%;
+    }
+
+    .mirror_list .distro {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: 200px;
+        width: 90%;
+    }
 }
