@@ -29,6 +29,8 @@ async fn get_distro_update_date(distro: web::Path<String>) -> HttpResponse {
         let mut contents = String::new();
         f.read_to_string(&mut contents).expect("Something went wrong reading the file");
 
+        contents = contents.trim().to_string();
+
         return HttpResponse::Ok().json(contents);
     }
 
@@ -51,6 +53,8 @@ async fn get_distro_status(distro: web::Path<String>) -> HttpResponse {
 
         let mut contents = String::new();
         f.read_to_string(&mut contents).expect("Something went wrong reading the file");
+
+        contents = contents.trim().to_string();
 
         return HttpResponse::Ok().json(contents);
     }
