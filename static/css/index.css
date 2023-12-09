@@ -18,7 +18,7 @@ head, body {
 
     color: white;
 
-    padding: 10px;
+    padding: 0 20px;
     
     font-family: 'codystar';
 }
@@ -69,25 +69,39 @@ head, body {
     height: 100%;
 
     color: white;
+    
+    padding: 10px;
 }
 
 .mirror_list .distro {
     width: 95%;
     height: 50px;
 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-
     margin: 10px auto;
     padding: 0 20px;
 
-    background-color: #303030;
+    /* background-color: #303030; */
 
     border-radius: 10px;
 
     cursor: pointer;
+}
+
+.mirror_list .distro table {
+    width: 100%;
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0 20px;
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 800px) {

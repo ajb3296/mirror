@@ -39,11 +39,11 @@ async function display_distro() {
         }
 
         let html = `
-            <div class="distro" onclick="window.location.href='/${distro}'">
-                <h2>${distro}</h2>
-                <h3 style="color: ${color}">${update_status}</h3>
-                <h3>${update_date}</h3>
-            </div>
+            <tr class="distro" onclick="window.location.href='/${distro}'">
+                <td><h2>${distro}</h2></td>
+                <td><h3 align="center" style="color: ${color}">${update_status}</h3></td>
+                <td><h3 align="right">${update_date}</h3></td>
+            </tr>
         `;
         
         return html;
@@ -51,5 +51,5 @@ async function display_distro() {
 
     let htmls = await Promise.all(promises);
 
-    document.getElementsByClassName("mirror_list")[0].innerHTML = htmls.join('');
+    document.getElementsByClassName("mirror_list")[0].innerHTML += htmls.join('');
 }
