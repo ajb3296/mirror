@@ -5,7 +5,7 @@ use actix_web::{web, get, HttpResponse};
 #[get("/distro_list")]
 async fn get_distro_list() -> HttpResponse {
     HttpResponse::Ok().json(vec![
-        "ubuntu",
+        // "ubuntu",
         "ubuntu-cd",
         "archlinux"
     ])
@@ -18,7 +18,7 @@ async fn get_distro_update_date(distro: web::Path<String>) -> HttpResponse {
     let path = "/apt-mirror/status/";
 
     let distro_hm = HashMap::from([
-        ("ubuntu", format!("{}{}", path, "ubuntu")),
+        // ("ubuntu", format!("{}{}", path, "ubuntu")),
         ("ubuntu-cd", format!("{}{}", path, "ubuntu_cd")),
         ("archlinux", format!("{}{}", path, "archlinux"))
     ]);
@@ -44,7 +44,7 @@ async fn get_distro_status(distro: web::Path<String>) -> HttpResponse {
     let path = "/apt-mirror/status/";
 
     let distro_hm = HashMap::from([
-        ("ubuntu", format!("{}{}", path, "ubuntu")),
+        // ("ubuntu", format!("{}{}", path, "ubuntu")),
         ("ubuntu-cd", format!("{}{}", path, "ubuntu_cd")),
         ("archlinux", format!("{}{}", path, "archlinux"))
     ]);
